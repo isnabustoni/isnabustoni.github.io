@@ -52,11 +52,11 @@ fetch("data/google_scholar.json")
       div.className = "card";
 
       div.innerHTML = `
-        <h3>${pub.title}</h3>
-        <p>${pub.authors || ""}</p>
-        <p><i>${pub.venue || ""}</i> ${pub.year ? "(" + pub.year + ")" : ""}</p>
-        <p><a href="${pub.link}" target="_blank">View paper</a></p>
-        <p>${pub.description || ""}</p>
+        <h3>${title}</h3>
+        <p>${authors || ""}</p>
+        <p><i>${venue || ""}</i> ${year ? "(" + year + ")" : ""}</p>
+        <p><a href="${link}" target="_blank">View paper</a></p>
+        <p>${description || ""}</p>
       `;
 
       container.appendChild(div);
