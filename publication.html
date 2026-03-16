@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>Publications</title>
 <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
 <header>
 <h1>Publications</h1>
-<nav>
-<a href="index.html">Home</a>
-</nav>
 </header>
 
 <section>
 
-<div class="card">
-
-<h3>Paper Title</h3>
-
-<p>
-Author1, Your Name, Author3
-</p>
-
-<p>
-CHI 2025
-</p>
-
-<p>
-<a href="#">PDF</a> |
-<a href="#">Code</a>
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>Another Paper</h3>
-
-<p>Conference / Journal</p>
-
-</div>
+<div id="pub-list"></div>
 
 </section>
+
+
+<script>
+
+fetch("data/publications.json")
+.then(response => response.json())
+.then(data => {
+
+const container = document.getElementById("pub-list");
+
+data.forEach(pub => {
+
+const div = document.createElement("div");
+div.className = "card";
+
+div.innerHTML = `
+<h3>${pub.title}</h3>
+<p>${pub.authors}</p>
+<p><b>${pub.venue}</b> (${pub.year})</p>
+<p><a href="${pub.link}">Paper</a></p>
+`;
+
+container.appendChild(div);
+
+});
+
+});
+
+</script>
 
 </body>
 </html>
