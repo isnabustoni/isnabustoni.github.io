@@ -2,7 +2,7 @@ from scholarly import scholarly
 import json
 
 # Replace with your Google Scholar ID
-SCHOLAR_ID = "YOUR_GOOGLE_SCHOLAR_ID"
+SCHOLAR_ID = "DyrzFsUAAAAJ"
 
 author = scholarly.search_author_id(SCHOLAR_ID)
 author = scholarly.fill(author)
