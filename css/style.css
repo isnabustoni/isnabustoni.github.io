@@ -82,3 +82,23 @@ padding:40px;
 background:white;
 border-top:1px solid #eee;
 }
+
+.pub-item{
+margin-bottom:25px;
+padding-bottom:15px;
+border-bottom:1px solid #eee;
+}
+
+.pub-title{
+font-weight:600;
+font-size:17px;
+}
+
+.pub-authors{
+color:#666;
+}
+
+.pub-venue{
+color:#111;
+font-style:italic;
+}
