@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
 
+<head>
+<meta charset="UTF-8">
 <title>Publications</title>
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 
 <body>
 
 <header>
 <h1>Publications</h1>
-  
+
 <nav>
 <a href="index.html">Home</a>
 <a href="publications.html">Publications</a>
@@ -19,10 +19,12 @@
 <a href="design.html">Design</a>
 <a href="cv.html">CV</a>
 </nav>
-  
+
 </header>
 
 <section>
+
+<h2>Research Publications</h2>
 
 <div id="pub-list"></div>
 
@@ -31,8 +33,15 @@
 
 <script>
 
+document.addEventListener("DOMContentLoaded", function() {
+
 fetch("data/google_scholar.json")
-  .then(response => response.json())
+  .then(response => {
+      if (!response.ok) {
+          throw new Error("JSON file not found");
+      }
+      return response.json();
+  })
   .then(data => {
 
     const container = document.getElementById("pub-list");
@@ -44,16 +53,22 @@ fetch("data/google_scholar.json")
 
       div.innerHTML = `
         <h3>${pub.title}</h3>
-        <p>${pub.author}</p>
+        <p>${pub.authors || ""}</p>
+        <p><i>${pub.venue || ""}</i> ${pub.year ? "(" + pub.year + ")" : ""}</p>
         <p><a href="${pub.link}" target="_blank">View paper</a></p>
-        <p>${pub.description}</p>
+        <p>${pub.description || ""}</p>
       `;
 
       container.appendChild(div);
 
     });
 
+  })
+  .catch(error => {
+    console.error("Error loading publications:", error);
   });
+
+});
 
 </script>
 
