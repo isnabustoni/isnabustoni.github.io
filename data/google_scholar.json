@@ -4,69 +4,89 @@
     "title": "SARIMA (Seasonal ARIMA) implementation on time series to forecast the number of Malaria incidence",
     "link": "https://ieeexplore.ieee.org/abstract/document/6676239/",
     "description": null,
-    "author": "…, I Hidayah, IA Bustoni - … technology and electrical …, 2013 - ieeexplore.ieee.org"
+    "authors": "Ashistya Erna Permanasari, Indriana Hidayah, Isna Alfi Bustoni",
+    "venue": "2013 international conference on information technology and electrical engineering (ICITEE)",
+    "year": "2013"
   },
   {
     "position": 2,
     "title": "The Perception of a Tap: Using Auditory Augmented Reality to Alter the Contact Properties of a Physical Object",
     "link": "https://dl.acm.org/doi/abs/10.1145/3745770",
     "description": null,
-    "author": "IA Bustoni, M McGill, S Brewster - ACM Transactions on Computer …, 2025 - dl.acm.org"
+    "authors": "Isna Alfi Bustoni, Mark McGill, Stephen Brewster",
+    "venue": "ACM Transactions on Computer …, 2025",
+    "year": "2025"
   },
   {
     "position": 3,
     "title": "Exploring the Alteration and Masking of Everyday Noise Sounds using Auditory Augmented Reality",
     "link": "https://dl.acm.org/doi/abs/10.1145/3678957.3685750",
     "description": null,
-    "author": "IA Bustoni, M McGill, SA Brewster - Proceedings of the 26th International …, 2024 - dl.acm.org"
+    "authors": "Isna Alfi Bustoni, Mark McGill, Stephen Brewster",
+    "venue": "Proceedings of the 26th International …, 2024",
+    "year": "2024"
   },
   {
     "position": 4,
     "title": "Classification methods performance on human activity recognition",
     "link": "https://iopscience.iop.org/article/10.1088/1742-6596/1456/1/012027/meta",
     "description": null,
-    "author": "IA Bustoni, I Hidayatulloh, AM Ningtyas… - Journal of Physics …, 2020 - iopscience.iop.org"
+    "authors": "Isna Alfi Bustoni, Indra Hidayatulloh, AM Ningtyas",
+    "venue": "Journal of Physics: Conference Series",
+    "year": "2020"
   },
   {
     "position": 5,
-    "title": "Toward manipulating user perceptions of objects by altering interaction sounds",
-    "link": "https://theses.gla.ac.uk/84878/",
-    "description": null,
-    "author": "IA Bustoni - 2025 - theses.gla.ac.uk"
-  },
-  {
-    "position": 6,
     "title": "UKARA: A fast and simple automatic short answer scoring system for Bahasa Indonesia",
     "link": "https://www.academia.edu/download/95048706/36.pdf",
     "description": null,
-    "author": "…, BN Prastowo, M Riasetiawan, IA Bustoni… - Proceeding Book of …, 2018 - academia.edu"
+    "authors": "…, BN Prastowo, M Riasetiawan, IA Bustoni…",
+    "venue": "Proceeding Book of 1st International Conference on Educational Assessment and Policy",
+    "year": "2018"
   },
   {
-    "position": 7,
+    "position": 6,
     "title": "Multidimensional earcon interaction design for the blind: A proposal and evaluation",
     "link": "https://ieeexplore.ieee.org/abstract/document/8864487/",
     "description": null,
-    "author": "IA Bustoni, I Hidayatulloh… - … International Seminar on …, 2018 - ieeexplore.ieee.org"
+    "authors": "IA Bustoni, I Hidayatulloh…",
+    "venue": "The 2018 International Seminar on Research of Information Technology and Intelligent Systems (ISRITI)",
+    "year": "2018"
   },
   {
-    "position": 8,
+    "position": 7,
     "title": "Fuzzy Logic Tsukamoto for SARIMA On Automation of Bandwidth Allocation",
     "link": "https://www.researchgate.net/profile/Indra-Hidayatulloh/publication/321399254_Fuzzy_Logic_Tsukamoto_for_SARIMA_On_Automation_of_Bandwidth_Allocation/links/5a2625f4a6fdcc8e866bb4cd/Fuzzy-Logic-Tsukamoto-for-SARIMA-On-Automation-of-Bandwidth-Allocation.pdf",
     "description": null,
-    "author": "IA Bustoni, EP Adhistya, I Hidayah… - International Journal of …, 2017 - researchgate.net"
+    "authors": "Isna Alfi Bustoni, Adhistya Erna Permanasari, Idriana Hidayah",
+    "venue": "International Journal of Advanced Computer Science and Applications",
+    "year": "2017"
   },
   {
-    "position": 9,
+    "position": 8,
     "title": "A PLATFORM VIEWW OF AUTIMATIC SHORT ANSWER SCORING SYSTEM",
     "link": "https://www.academia.edu/download/115462057/70.pdf",
     "description": null,
-    "author": "…, M Riasetiawan, BN Prastowo, IA Bustoni… - ICEAP Proceeding … - academia.edu"
+    "authors": "M Riasetiawan, BN Prastowo, Isna Alfi Bustoni…",
+    "venue": "Proceeding Book of 1st International Conference on Educational Assessment and Policy",
+    "year": "2018"
   },
+    {
+    "position": 9,
+    "title": "Forecasting model for hotspot bandwidth management at Department of Electrical Engineering and Information Technology UGM",
+    "link": "https://www.researchgate.net/profile/Adhistya-Permanasari-2/publication/282010306_Forecasting_Model_for_Hotspot_Bandwidth_Management_at_Department_of_Electrical_Engineering_and_Information_Technology_UGM/links/567a2a0508ae7fea2e98bf5f/Forecasting-Model-for-Hotspot-Bandwidth-Management-at-Department-of-Electrical-Engineering-and-Information-Technology-UGM.pdf",
+    "description": null,
+    "authors": "Adhistya Erna Permanasari, Indriana Hidayah, Isna Alfi Bustoni",
+    "venue": "International Journal of Applied Math and Statistics",
+    "year": "2015"
+  }
   {
     "position": 10,
     "title": "PERAMALAN LALU-LINTAS JARINGAN UGM HOTSPOT MENGGUNAKAN METODE SEASONAL AUTOREGRESSIVE INTEGRATED MOVING AVERAGE",
     "link": "https://etd.repository.ugm.ac.id/penelitian/detail/70859",
     "description": null,
-    "author": "IA Bustoni - 2014 - etd.repository.ugm.ac.id"
+    "authors": "Isna Alfi Bustoni",
+    "venue": "2014",
+    "year": "2014"
   }
 ]
