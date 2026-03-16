@@ -4,40 +4,19 @@
 <head>
 <meta charset="UTF-8">
 <title>Publications</title>
-<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
 <h1>Publications</h1>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="publications.html">Publications</a>
-<a href="projects.html">Projects</a>
-<a href="design.html">Design</a>
-<a href="cv.html">CV</a>
-</nav>
-
-</header>
-
-<section>
-
-<h2>Research Publications</h2>
 
 <div id="pub-list"></div>
 
-</section>
-
-
 <script>
 
-fetch("data/google_scholar.json")
+fetch("./data/google_scholar.json")
   .then(response => response.json())
   .then(data => {
-
-    console.log("Loaded data:", data);
 
     const container = document.getElementById("pub-list");
 
@@ -46,15 +25,18 @@ fetch("data/google_scholar.json")
       const div = document.createElement("div");
 
       div.innerHTML = `
-        <p><strong>${pub.title}</strong></p>
+        <p>
+        <b>${pub.title}</b><br>
+        ${pub.authors}<br>
+        ${pub.venue} (${pub.year})
+        </p>
       `;
 
       container.appendChild(div);
 
     });
 
-  })
-  .catch(error => console.error("Fetch error:", error));
+  });
 
 </script>
 
