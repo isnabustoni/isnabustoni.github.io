@@ -82,27 +82,42 @@ padding:40px;
 background:white;
 border-top:1px solid #eee;
 }
+/* Publications */
 
 .pub-item{
 margin-bottom:25px;
-padding-bottom:15px;
+padding-bottom:20px;
 border-bottom:1px solid #eee;
 }
 
 .pub-title{
 font-weight:600;
-font-size:17px;
+font-size:18px;
+margin-bottom:6px;
 }
 
 .pub-authors{
-color:#666;
+color:#555;
+margin-bottom:4px;
 }
 
 .pub-venue{
-color:#111;
 font-style:italic;
+color:#333;
+margin-bottom:6px;
 }
 
+.pub-links a{
+display:inline-block;
+margin-right:10px;
+text-decoration:none;
+font-size:14px;
+color:#0066cc;
+}
+
+.pub-links a:hover{
+text-decoration:underline;
+}
 
 .design-grid{
 display:grid;
