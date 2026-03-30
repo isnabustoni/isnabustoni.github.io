@@ -1,4 +1,4 @@
-const API_KEY = "d755d69r01qg1eo7meq0d755d69r01qg1eo7meqg";
+const API_KEY = "d755l2hr01qg1eo7nhlgd755l2hr01qg1eo7nhm0";
 let watchlist = [];
 
 async function fetchStock(ticker) {
