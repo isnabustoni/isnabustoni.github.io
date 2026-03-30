@@ -12,9 +12,30 @@
 </head>
 <body>
 
-<h1> My Stock Dashboard</h1>
+<div class="container">
 
-<div id="watchlist"></div>
+    <!-- LEFT PANEL -->
+    <div class="sidebar">
+      <h2> Watchlist</h2>
+      <input id="searchStock" placeholder="Search stock..." />
+      <div id="suggestions"></div>
+      <div id="watchlist"></div>
+    </div>
+
+    <!-- MAIN PANEL -->
+    <div class="main">
+      <h2 id="selectedStock">Select a stock</h2>
+
+      <canvas id="priceChart"></canvas>
+      <canvas id="rsiChart"></canvas>
+
+      <div id="stockDetails"></div>
+    </div>
+
+  </div>
+
+
+
 
 <h2>Add Stock</h2>
 <input id="ticker" placeholder="NVDA" />
