@@ -4,59 +4,54 @@ let watchlist = [];
 let priceChart;
 let rsiChart;
 
+
+const STOCK_LIST = [
+  { symbol: "AAPL", name: "Apple" },
+  { symbol: "MSFT", name: "Microsoft" },
+  { symbol: "NVDA", name: "NVIDIA" },
+  { symbol: "TSLA", name: "Tesla" },
+  { symbol: "AMZN", name: "Amazon" },
+  { symbol: "GOOGL", name: "Google" },
+  { symbol: "META", name: "Meta" },
+  { symbol: "NESN.SW", name: "Nestlé (Swiss)" },
+  { symbol: "ROG.SW", name: "Roche (Swiss)" }
+];
+
+
+
 /* =========================
    🔍 SEARCH STOCKS
 ========================= */
 
-document.getElementById("searchStock").addEventListener("input", async (e) => {
-  const query = e.target.value.trim();
+document.getElementById("searchStock").addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
   const suggestions = document.getElementById("suggestions");
 
   suggestions.innerHTML = "";
 
-  if (query.length < 2) return;
+  if (query.length < 1) return;
 
-  try {
-    const res = await fetch(
-      `https://finnhub.io/api/v1/search?q=${query}&token=${API_KEY}`
-    );
-    const data = await res.json();
+  const results = STOCK_LIST.filter(stock =>
+    stock.symbol.toLowerCase().includes(query) ||
+    stock.name.toLowerCase().includes(query)
+  );
 
-    if (!data.result || data.result.length === 0) {
-      suggestions.innerHTML = "<p>No results</p>";
-      return;
-    }
+  results.slice(0, 5).forEach(stock => {
+    const div = document.createElement("div");
+    div.className = "card";
 
-    
-    data.result
-      .filter(stock =>
-        stock.symbol &&
-        stock.symbol.length <= 5 &&
-        stock.type === "Common Stock"
-      )
-      .slice(0, 5)
-      .forEach(stock => {
+    div.innerHTML = `
+      <strong>${stock.symbol}</strong><br/>
+      <small>${stock.name}</small>
+    `;
 
-        const div = document.createElement("div");
-        div.className = "card";
+    div.addEventListener("click", () => {
+      selectStock(stock.symbol);
+      suggestions.innerHTML = "";
+    });
 
-        div.innerHTML = `
-          <strong>${stock.symbol}</strong><br/>
-          <small>${stock.description}</small>
-        `;
-
-        div.addEventListener("click", () => {
-          selectStock(stock.symbol);
-          suggestions.innerHTML = "";
-        });
-
-        suggestions.appendChild(div);
-      });
-
-  } catch (err) {
-    console.error(err);
-    suggestions.innerHTML = "<p>Error loading data</p>";
-  }
+    suggestions.appendChild(div);
+  });
 });
 
 /* =========================
@@ -89,23 +84,23 @@ async function selectStock(ticker) {
 ========================= */
 
 async function getHistory(ticker) {
-  const now = Math.floor(Date.now() / 1000);
-  const oneMonthAgo = now - (60 * 60 * 24 * 30);
+  try {
+    const url = `https://query1.finance.yahoo.com/v8/finance/chart/${ticker}?range=1mo&interval=1d`;
 
-  const res = await fetch(
-    `https://finnhub.io/api/v1/stock/candle?symbol=${ticker}&resolution=D&from=${oneMonthAgo}&to=${now}&token=${API_KEY}`
-  );
+    const res = await fetch(url);
+    const data = await res.json();
 
-  const data = await res.json();
+    const result = data.chart.result[0];
 
-  if (data.s !== "ok") {
-    console.error("No candle data:", data);
+    const prices = result.indicators.quote[0].close;
+
+    return { c: prices };
+
+  } catch (err) {
+    console.error("Yahoo error:", err);
     return { c: [] };
   }
-
-  return data;
 }
-
 
 /* =========================
    📈 PRICE CHART
