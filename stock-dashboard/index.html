@@ -2,52 +2,111 @@
 <html>
 <head>
   <title>Stock Dashboard</title>
+
+  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   <link rel="stylesheet" href="style.css">
-  
-  
+
+  <style>
+    canvas {
+      width: 100% !important;
+      height: 250px !important;
+      margin-bottom: 20px;
+    }
+
+    #suggestions {
+      background: #161b22;
+      border: 1px solid #30363d;
+      max-height: 200px;
+      overflow-y: auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      background: #0d1117;
+      color: white;
+      border: 1px solid #30363d;
+    }
+
+    button {
+      padding: 8px;
+      background: #238636;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2ea043;
+    }
+
+    .section {
+      margin-top: 20px;
+      padding: 10px;
+      background: #161b22;
+      border-radius: 8px;
+    }
+  </style>
 </head>
+
 <body>
 
 <div class="container">
 
-    <!-- LEFT PANEL -->
-    <div class="sidebar">
-      <h2> Watchlist</h2>
-      <input id="searchStock" placeholder="Search stock..." />
-      <div id="suggestions"></div>
-      <div id="watchlist"></div>
+  <!-- LEFT PANEL -->
+  <div class="sidebar">
+    <h2>📊 Watchlist</h2>
+
+    <input id="searchStock" placeholder="Search stock..." />
+    <div id="suggestions"></div>
+
+    <div id="watchlist"></div>
+
+    <!-- ADD STOCK -->
+    <div class="section">
+      <h3>Add Stock</h3>
+      <input id="ticker" placeholder="NVDA" />
+      <input id="quantity" placeholder="100" />
+      <button onclick="addStock()">Add</button>
     </div>
+  </div>
 
-    <!-- MAIN PANEL -->
-    <div class="main">
-      <h2 id="selectedStock">Select a stock</h2>
+  <!-- MAIN PANEL -->
+  <div class="main">
 
-      <canvas id="priceChart"></canvas>
-      <canvas id="rsiChart"></canvas>
+    <h2 id="selectedStock">Select a stock</h2>
 
-      <div id="stockDetails"></div>
+    <!-- PRICE CHART -->
+    <canvas id="priceChart"></canvas>
+
+    <!-- RSI -->
+    <canvas id="rsiChart"></canvas>
+
+    <!-- DETAILS -->
+    <div id="stockDetails"></div>
+
+    <!-- SIMULATION -->
+    <div class="section">
+      <h3>🧮 Simulation</h3>
+
+      <input id="currentShares" placeholder="Shares" />
+      <input id="avgPrice" placeholder="Avg Price" />
+      <input id="targetAvg" placeholder="Target Avg" />
+      <input id="currentPrice" placeholder="Current Price" />
+
+      <button onclick="simulate()">Simulate</button>
+
+      <p id="result"></p>
     </div>
 
   </div>
 
-
-
-
-<h2>Add Stock</h2>
-<input id="ticker" placeholder="NVDA" />
-<input id="quantity" placeholder="100" />
-<button onclick="addStock()">Add</button>
-
-<h2>Simulation</h2>
-<input id="currentShares" placeholder="Shares" />
-<input id="avgPrice" placeholder="Avg Price" />
-<input id="targetAvg" placeholder="Target Avg" />
-<input id="currentPrice" placeholder="Current Price" />
-<button onclick="simulate()">Simulate</button>
-
-<p id="result"></p>
+</div>
 
 <script src="app.js"></script>
 
