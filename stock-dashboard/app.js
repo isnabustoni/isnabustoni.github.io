@@ -63,7 +63,20 @@ document.getElementById("searchStock").addEventListener("input", async (e) => {
 });
 
 
+async function selectStock(ticker) {
+  document.getElementById("selectedStock").innerText = ticker;
 
+  const history = await getHistory(ticker);
+  const prices = history.c;
+
+  drawChart(ticker);
+  drawRSI(prices);
+
+  const indicators = calculateIndicators(prices);
+  const fundamentals = await getFundamentals(ticker);
+
+  renderDetails(indicators, fundamentals, ticker);
+}
 
 
 async function addStock() {
