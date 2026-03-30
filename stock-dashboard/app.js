@@ -15,26 +15,54 @@ async function searchStocks(query) {
   return await res.json();
 }
 
+
 document.getElementById("searchStock").addEventListener("input", async (e) => {
-  const query = e.target.value;
-
-  if (query.length < 2) return;
-
-  const data = await searchStocks(query);
+  const query = e.target.value.trim();
 
   const suggestions = document.getElementById("suggestions");
   suggestions.innerHTML = "";
 
-  data.result.slice(0, 5).forEach(stock => {
-    const div = document.createElement("div");
-    div.className = "card";
-    div.innerText = `${stock.symbol} - ${stock.description}`;
+  if (query.length < 2) return;
 
-    div.onclick = () => selectStock(stock.symbol);
+  try {
+    const res = await fetch(
+      `https://finnhub.io/api/v1/search?q=${query}&token=${API_KEY}`
+    );
 
-    suggestions.appendChild(div);
-  });
+    const data = await res.json();
+
+    if (!data.result || data.result.length === 0) {
+      suggestions.innerHTML = "<p>No results</p>";
+      return;
+    }
+
+    data.result.slice(0, 5).forEach(stock => {
+      const div = document.createElement("div");
+      div.className = "card";
+      div.style.cursor = "pointer";
+
+      div.innerHTML = `
+        <strong>${stock.symbol}</strong><br/>
+        <small>${stock.description}</small>
+      `;
+
+      div.addEventListener("click", () => {
+        selectStock(stock.symbol);
+        suggestions.innerHTML = ""; // clear after click
+      });
+
+      suggestions.appendChild(div);
+    });
+
+  } catch (err) {
+    console.error("Search error:", err);
+    suggestions.innerHTML = "<p>Error loading data</p>";
+  }
 });
+
+
+
+
 
 async function addStock() {
   const ticker = document.getElementById("ticker").value;
