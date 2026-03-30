@@ -8,6 +8,34 @@ async function fetchStock(ticker) {
   return await res.json();
 }
 
+async function searchStocks(query) {
+  const res = await fetch(
+    `https://finnhub.io/api/v1/search?q=${query}&token=${API_KEY}`
+  );
+  return await res.json();
+}
+
+document.getElementById("searchStock").addEventListener("input", async (e) => {
+  const query = e.target.value;
+
+  if (query.length < 2) return;
+
+  const data = await searchStocks(query);
+
+  const suggestions = document.getElementById("suggestions");
+  suggestions.innerHTML = "";
+
+  data.result.slice(0, 5).forEach(stock => {
+    const div = document.createElement("div");
+    div.className = "card";
+    div.innerText = `${stock.symbol} - ${stock.description}`;
+
+    div.onclick = () => selectStock(stock.symbol);
+
+    suggestions.appendChild(div);
+  });
+});
+
 async function addStock() {
   const ticker = document.getElementById("ticker").value;
   const data = await fetchStock(ticker);
