@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stock Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body { font-family: Arial; background: #111; color: white; }
+    .bullish { color: lime; }
+    .bearish { color: red; }
+    .card { border: 1px solid #333; padding: 10px; margin: 10px; }
+  </style>
+</head>
+<body>
+
+<h1> My Stock Dashboard</h1>
+
+<div id="watchlist"></div>
+
+<h2>Add Stock</h2>
+<input id="ticker" placeholder="NVDA" />
+<input id="quantity" placeholder="100" />
+<button onclick="addStock()">Add</button>
+
+<h2>Simulation</h2>
+<input id="currentShares" placeholder="Shares" />
+<input id="avgPrice" placeholder="Avg Price" />
+<input id="targetAvg" placeholder="Target Avg" />
+<input id="currentPrice" placeholder="Current Price" />
+<button onclick="simulate()">Simulate</button>
+
+<p id="result"></p>
+
+<script src="app.js"></script>
+
+</body>
+</html>
