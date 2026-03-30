@@ -48,3 +48,37 @@ function simulate() {
   document.getElementById("result").innerText =
     `Buy ${Math.ceil(Q2)} shares to reach target average`;
 }
+
+
+function movingAverage(prices, period = 14) {
+  return prices.slice(-period).reduce((a,b)=>a+b,0)/period;
+}
+
+function calculateRSI(prices, period = 14) {
+  let gains = 0, losses = 0;
+
+  for (let i = 1; i < period; i++) {
+    let diff = prices[i] - prices[i-1];
+    if (diff >= 0) gains += diff;
+    else losses -= diff;
+  }
+
+  let rs = gains / losses;
+  return 100 - (100 / (1 + rs));
+}
+
+function recommend(stock, profile) {
+  let reasons = [];
+
+  if (profile === "dividend") {
+    if (stock.dividendYield > 3) reasons.push("High dividend");
+    if (stock.pe < 20) reasons.push("Undervalued");
+  }
+
+  if (stock.rsi < 30) reasons.push("Oversold → good entry");
+
+  return reasons.length > 0
+    ? "✅ Good buy: " + reasons.join(", ")
+    : "⚠️ Wait";
+}
+
