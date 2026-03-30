@@ -196,23 +196,11 @@ function calculateIndicators(prices) {
 /* =========================
    💰 FUNDAMENTALS
 ========================= */
-
 async function getFundamentals(ticker) {
-  try {
-    const res = await fetch(
-      `https://finnhub.io/api/v1/stock/metric?symbol=${ticker}&metric=all&token=${API_KEY}`
-    );
-
-    const data = await res.json();
-
-    return {
-      pe: data.metric?.peBasicExclExtraTTM || null,
-      dividend: data.metric?.dividendYieldIndicatedAnnual || null
-    };
-
-  } catch {
-    return { pe: null, dividend: null };
-  }
+  return {
+    pe: null,
+    dividend: null
+  };
 }
 
 
