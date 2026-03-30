@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: Arial;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 300px;
+  background: #161b22;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+}
+
+.card {
+  padding: 10px;
+  border-bottom: 1px solid #30363d;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: #21262d;
+}
+
+.bullish { color: #00ff9c; }
+.bearish { color: #ff4d4d; }
