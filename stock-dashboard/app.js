@@ -48,8 +48,10 @@ document.getElementById("searchStock").addEventListener("input", async (e) => {
 
       div.addEventListener("click", () => {
         selectStock(stock.symbol);
-        suggestions.innerHTML = ""; // clear after click
+        
       });
+
+ 
 
       suggestions.appendChild(div);
     });
