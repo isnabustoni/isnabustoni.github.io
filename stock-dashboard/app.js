@@ -27,30 +27,37 @@ document.getElementById("searchStock").addEventListener("input", async (e) => {
       return;
     }
 
-    data.result.slice(0, 5).forEach(stock => {
-      const div = document.createElement("div");
-      div.className = "card";
-      div.style.cursor = "pointer";
+    
+    data.result
+      .filter(stock =>
+        stock.symbol &&
+        stock.symbol.length <= 5 &&
+        stock.type === "Common Stock"
+      )
+      .slice(0, 5)
+      .forEach(stock => {
 
-      div.innerHTML = `
-        <strong>${stock.symbol}</strong><br/>
-        <small>${stock.description}</small>
-      `;
+        const div = document.createElement("div");
+        div.className = "card";
 
-      div.addEventListener("click", () => {
-        selectStock(stock.symbol);
-        suggestions.innerHTML = "";
+        div.innerHTML = `
+          <strong>${stock.symbol}</strong><br/>
+          <small>${stock.description}</small>
+        `;
+
+        div.addEventListener("click", () => {
+          selectStock(stock.symbol);
+          suggestions.innerHTML = "";
+        });
+
+        suggestions.appendChild(div);
       });
-
-      suggestions.appendChild(div);
-    });
 
   } catch (err) {
     console.error(err);
     suggestions.innerHTML = "<p>Error loading data</p>";
   }
 });
-
 
 /* =========================
    📊 SELECT STOCK
