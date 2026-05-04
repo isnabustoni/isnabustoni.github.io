@@ -114,12 +114,35 @@ box-shadow:0 10px 24px rgba(0,0,0,0.08);
 
 /* ===== Thumbnail ===== */
 
+/* Make thumbnail relative */
+
+.pub-thumb{
+position:relative;
+width:100%;
+aspect-ratio:16 / 9;
+overflow:hidden;
+}
+
+/* Tag badge */
+.pub-tag{
+position:absolute;
+top:10px;
+left:10px;
+background:#111;
+color:white;
+font-size:12px;
+padding:4px 8px;
+border-radius:6px;
+font-weight:500;
+}
+
+/* 
 .pub-thumb{
 width:100%;
 aspect-ratio:16 / 9;   /* landscape */
 overflow:hidden;
 background:#ddd;
-}
+} */
 
 .pub-thumb img{
 width:100%;
