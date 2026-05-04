@@ -127,7 +127,7 @@ fetch("data/google_scholar.json")
     authors = authors.replace("Isna Alfi Bustoni", "<strong>Isna Alfi Bustoni</strong>");
 
     // thumbnail (fallback if missing)
-    const thumbnail = pub.thumbnail || "images/default.jpg";
+    const thumbnail = pub.thumbnail || "images/default.png";
 
     div.innerHTML = `
       <div class="pub-thumb">
