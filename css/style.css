@@ -149,9 +149,14 @@ text-align:center;
 margin-top:40px;
 }
 
-
-
 .pub-card{
+display:flex;
+gap:20px;                /* more breathing room */
+padding:10px;
+}
+
+
+/* .pub-card{
 display:flex;
 gap:20px;
 background:white;
@@ -159,7 +164,7 @@ border:1px solid #eee;
 border-radius:12px;
 overflow:hidden;
 margin-bottom:20px;
-}
+} */
 
 .pub-thumb{
 width:220px;              /* wider than before */
