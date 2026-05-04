@@ -52,11 +52,12 @@ fetch("data/google_scholar.json")
     // thumbnail fallback
     const thumbnail = pub.thumbnail || "images/default.png";
     const tag = pub.tag || "";
-    
+
     div.innerHTML = `
+      ${tag ? `<div class="pub-tag">${tag}</div>` : ""}
+    
       <div class="pub-thumb">
         <img src="${thumbnail}" alt="thumbnail">
-        ${tag ? `<div class="pub-tag">${tag}</div>` : ""}
       </div>
     
       <div class="pub-content">
