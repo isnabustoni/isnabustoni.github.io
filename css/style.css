@@ -149,13 +149,9 @@ text-align:center;
 margin-top:40px;
 }
 
-.pub-card{
-display:block;
-max-width:600px;
-margin-bottom:25px;
-}
 
-/* .pub-card{
+
+.pub-card{
 display:flex;
 gap:20px;
 background:white;
@@ -163,7 +159,7 @@ border:1px solid #eee;
 border-radius:12px;
 overflow:hidden;
 margin-bottom:20px;
-} */
+}
 
 .pub-thumb{
 width:220px;              /* wider than before */
@@ -174,12 +170,6 @@ border-radius:10px;
 } 
 
 
-
-.pub-thumb img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
 
 .pub-content{
 padding:15px;
