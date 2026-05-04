@@ -50,34 +50,68 @@ fetch("data/google_scholar.json")
     authors = authors.replace("Isna Alfi Bustoni", "<strong>Isna Alfi Bustoni</strong>");
 
     // thumbnail fallback
-    const thumbnail = pub.thumbnail || "images/default.jpg";
-
+    const thumbnail = pub.thumbnail || "images/default.png";
+    const tag = pub.tag || "";
+    
     div.innerHTML = `
       <div class="pub-thumb">
         <img src="${thumbnail}" alt="thumbnail">
+        ${tag ? `<div class="pub-tag">${tag}</div>` : ""}
       </div>
-
+    
       <div class="pub-content">
-
+    
         <div class="pub-title">
           ${pub.title}
         </div>
-
+    
         <div class="pub-meta">
           ${authors}<br>
-          <i>${pub.venue || ""}</i> (${pub.year || ""})
+          <i>${pub.venue}</i> (${pub.year})
         </div>
-
+    
         <div class="pub-desc">
-          ${pub.description || "Research in HCI, AI, or data-driven systems."}
+          ${pub.description || ""}
         </div>
-
+    
         <div class="pub-links">
           <a href="${pub.link}" target="_blank">View Paper</a>
         </div>
-
+    
       </div>
     `;
+
+
+
+    
+    // const thumbnail = pub.thumbnail || "images/default.jpg";
+
+    // div.innerHTML = `
+    //   <div class="pub-thumb">
+    //     <img src="${thumbnail}" alt="thumbnail">
+    //   </div>
+
+    //   <div class="pub-content">
+
+    //     <div class="pub-title">
+    //       ${pub.title}
+    //     </div>
+
+    //     <div class="pub-meta">
+    //       ${authors}<br>
+    //       <i>${pub.venue || ""}</i> (${pub.year || ""})
+    //     </div>
+
+    //     <div class="pub-desc">
+    //       ${pub.description || "Research in HCI, AI, or data-driven systems."}
+    //     </div>
+
+    //     <div class="pub-links">
+    //       <a href="${pub.link}" target="_blank">View Paper</a>
+    //     </div>
+
+    //   </div>
+    // `;
 
     container.appendChild(div);
 
