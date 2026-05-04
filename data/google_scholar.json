@@ -4,7 +4,7 @@
   "title": "The Perception of a Tap: Using Auditory Augmented Reality to Alter the Contact Properties of a Physical Object",
   "link": "https://dl.acm.org/doi/abs/10.1145/3745770",
   "description": "What if a simple tap could feel like striking metal, wood, or even a musical instrument, without changing the object at all? This paper reveals how auditory augmented reality can subtly reshape how we perceive touch, blending sound and sensation to transform everyday interactions in surprising ways.",
-  "thumbnail": "images/papers/casual_interaction.png",
+  "thumbnail": "images/papers/tap.png",
   "authors": "Isna Alfi Bustoni, Mark McGill, Stephen Brewster",
   "venue": "ACM Transactions on Computer-Human Interaction, 2025",
   "year": "2025"
