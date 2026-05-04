@@ -16,7 +16,7 @@
     "thumbnail": "images/papers/noise.png",
     "description": "What if you could quiet the world without tuning it out? This paper explores how auditory augmented reality can soften, reshape, or even replace everyday noise—while keeping the sounds that matter—offering a smarter, more selective way to stay aware without the overwhelm.",
     "authors": "Isna Alfi Bustoni, Mark McGill, Stephen Brewster",
-    "venue": "Proceedings of the 26th International …, 2024",
+    "venue": "Proceedings of the 26th International Conference on Multimodal Interaction",
     "year": "2024"
 
   },
@@ -24,7 +24,7 @@
     "position": 3,
         "title": "Classification methods performance on human activity recognition",
     "link": "https://iopscience.iop.org/article/10.1088/1742-6596/1456/1/012027/meta",
-    "description": null,
+    "description": "Which algorithm truly understands human movement best? This paper cuts through the noise by directly comparing leading machine learning methods, revealing how Random Forest and SVM stack up in accuracy, speed, and reliability for real-world activity monitoring.",
     "authors": "Isna Alfi Bustoni, Indra Hidayatulloh, AM Ningtyas",
     "venue": "Journal of Physics: Conference Series",
     "year": "2020"
@@ -34,8 +34,8 @@
     "position": 4,
     "title": "UKARA: A fast and simple automatic short answer scoring system for Bahasa Indonesia",
     "link": "https://www.academia.edu/download/95048706/36.pdf",
-    "description": null,
-    "authors": "…, BN Prastowo, M Riasetiawan, IA Bustoni…",
+    "description": "UKARA is a web-based automatic short-answer scoring (ASAS) system for Bahasa Indonesia, designed to assist educators by grading student responses, often using a dichotomous (correct/incorrect) approach",
+    "authors": ".., BN Prastowo, M Riasetiawan, IA Bustoni…",
     "venue": "Proceeding Book of 1st International Conference on Educational Assessment and Policy",
     "year": "2018"
 
