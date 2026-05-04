@@ -172,13 +172,13 @@ text-decoration:underline;
 
 /* ===== Responsive ===== */
 
-/* @media (max-width:768px){
+@media (max-width:768px){
 #pub-list{
 grid-template-columns:1fr;
 }
-} */
+}
 
-@media (max-width:1000px){
+@media (max-width:1200px){
   #pub-list{
     grid-template-columns:repeat(2, 1fr);
   }
