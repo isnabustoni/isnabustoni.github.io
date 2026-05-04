@@ -119,34 +119,41 @@ box-shadow:0 10px 24px rgba(0,0,0,0.08);
 /* Card needs relative positioning */
 .pub-card{
 position:relative;
-padding-top:10px;
+padding-top:20px;
 }
 
-/* Tag above card */
 .pub-tag{
-display:inline-block;
+position:absolute;
+top:0;
+left:15px;
+transform:translateY(-50%);
 background:#111;
 color:white;
 font-size:12px;
 padding:5px 10px;
 border-radius:6px;
-margin-bottom:8px;
-font-weight:500;
+z-index:2;
 }
 
-/* 
+.pub-tag.chi { background:#e63946; }
+.pub-tag.journal { background:#457b9d; }
+.pub-tag.ai { background:#2a9d8f; }
+.pub-tag.design { background:#9d4edd; }
+
+
 .pub-thumb{
 width:100%;
 aspect-ratio:16 / 9;   /* landscape */
 overflow:hidden;
 background:#ddd;
-} */
+border-radius:10px;
+}
 
 .pub-thumb img{
 width:100%;
 height:100%;
 object-fit:cover;
-transition:0.3s;
+display:block;
 }
 
 .pub-card:hover .pub-thumb img{
