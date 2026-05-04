@@ -161,7 +161,7 @@ margin-bottom:20px;
 
 .pub-thumb{
 width:180px;          /* controls size */
-aspect-ratio: 16 / 9; /* rectangular shape */
+aspect-ratio: 9 / 16; /* rectangular shape */
 flex-shrink:0;
 overflow:hidden;
 border-radius:8px;
