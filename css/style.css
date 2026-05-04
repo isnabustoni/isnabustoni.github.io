@@ -84,17 +84,17 @@ border-top:1px solid #eee;
 }
 /* ===== Publications Grid ===== */
 
-/* #pub-list{
-display:grid;
-grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
-gap:24px;
-} */
-
 #pub-list{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(480px, 1fr));
+gap:24px;
+}
+
+/* #pub-list{
 display:grid;
 grid-template-columns:repeat(3, 1fr);
 gap:24px;
-}
+} */
 
 /* ===== Card ===== */
 
