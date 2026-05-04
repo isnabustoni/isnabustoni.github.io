@@ -116,23 +116,21 @@ box-shadow:0 10px 24px rgba(0,0,0,0.08);
 
 /* Make thumbnail relative */
 
-.pub-thumb{
+/* Card needs relative positioning */
+.pub-card{
 position:relative;
-width:100%;
-aspect-ratio:16 / 9;
-overflow:hidden;
+padding-top:10px;
 }
 
-/* Tag badge */
+/* Tag above card */
 .pub-tag{
-position:absolute;
-top:10px;
-left:10px;
+display:inline-block;
 background:#111;
 color:white;
 font-size:12px;
-padding:4px 8px;
+padding:5px 10px;
 border-radius:6px;
+margin-bottom:8px;
 font-weight:500;
 }
 
