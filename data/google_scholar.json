@@ -1,60 +1,63 @@
 [
   {
     "position": 1,
-    "title": "SARIMA (Seasonal ARIMA) implementation on time series to forecast the number of Malaria incidence",
-    "link": "https://ieeexplore.ieee.org/abstract/document/6676239/",
-    "description": null,
-    "authors": "Ashistya Erna Permanasari, Indriana Hidayah, Isna Alfi Bustoni",
-    "venue": "2013 international conference on information technology and electrical engineering (ICITEE)",
-    "year": "2013"
-  },
-  {
-    "position": 2,
     "title": "The Perception of a Tap: Using Auditory Augmented Reality to Alter the Contact Properties of a Physical Object",
     "link": "https://dl.acm.org/doi/abs/10.1145/3745770",
-    "description": null,
+    "description": Audio Augmented Reality (AAR) offers new ways of enhancing everyday object interactions by modifying their auditory contact properties in real-time. This research explored the effects of different audio feedback (surface materials, musical instruments) and reverb parameters (mixing, depth) on perceived simultaneity, unity, agency, and object/environment properties, along with their recognition accuracy.
+
+The researchers found that audio feedback had a significant but small effect on interaction perception and altered perceived object properties. Mixing in reverb reduced audio recognition but boosted reverb determination. Guidelines were offered on combining audio feedback and reverb based on acoustic properties and reverb parameter adjustment to provide multi-level feedback for AAR.
+
+The results showed that audio feedback can change user perception of object size and material, while reverb can alter the perception of object and room size. Auditory feedback did not strongly impact perceived simultaneity, unity, and agency of the interaction, allowing for conveying information through audio and reverb concurrently. However, audio recognition accuracy was influenced by reverb mixing, with a mixing level of 0.5 or lower helping retain accuracy. Reverb could also be used to convey binary information rather than continuous when combined with audio.
+
+These findings suggest AAR can be used to create passive haptic effects and casual interactions by altering the perceived properties of physical objects through auditory augmentation. The researchers provide guidelines on selecting appropriate audio and reverb parameters to achieve desired user perceptions and recognition. Future work could explore a broader range of audio types, spatial audio, and the integration of AAR in AR headsets.,
+    "thumbnail": "images/papers/casual_interaction.jpg"
     "authors": "Isna Alfi Bustoni, Mark McGill, Stephen Brewster",
     "venue": "ACM Transactions on Computer …, 2025",
     "year": "2025"
+    
   },
   {
-    "position": 3,
+    "position": 2,
     "title": "Exploring the Alteration and Masking of Everyday Noise Sounds using Auditory Augmented Reality",
     "link": "https://dl.acm.org/doi/abs/10.1145/3678957.3685750",
     "description": null,
     "authors": "Isna Alfi Bustoni, Mark McGill, Stephen Brewster",
     "venue": "Proceedings of the 26th International …, 2024",
     "year": "2024"
+
   },
   {
-    "position": 4,
-    "title": "Classification methods performance on human activity recognition",
+    "position": 3,
+        "title": "Classification methods performance on human activity recognition",
     "link": "https://iopscience.iop.org/article/10.1088/1742-6596/1456/1/012027/meta",
     "description": null,
     "authors": "Isna Alfi Bustoni, Indra Hidayatulloh, AM Ningtyas",
     "venue": "Journal of Physics: Conference Series",
     "year": "2020"
+    
   },
   {
-    "position": 5,
+    "position": 4,
     "title": "UKARA: A fast and simple automatic short answer scoring system for Bahasa Indonesia",
     "link": "https://www.academia.edu/download/95048706/36.pdf",
     "description": null,
     "authors": "…, BN Prastowo, M Riasetiawan, IA Bustoni…",
     "venue": "Proceeding Book of 1st International Conference on Educational Assessment and Policy",
     "year": "2018"
+
   },
   {
-    "position": 6,
+    "position": 5,
     "title": "Multidimensional earcon interaction design for the blind: A proposal and evaluation",
     "link": "https://ieeexplore.ieee.org/abstract/document/8864487/",
     "description": null,
     "authors": "IA Bustoni, I Hidayatulloh…",
     "venue": "The 2018 International Seminar on Research of Information Technology and Intelligent Systems (ISRITI)",
     "year": "2018"
+
   },
   {
-    "position": 7,
+    "position": 6,
     "title": "Fuzzy Logic Tsukamoto for SARIMA On Automation of Bandwidth Allocation",
     "link": "https://www.researchgate.net/profile/Indra-Hidayatulloh/publication/321399254_Fuzzy_Logic_Tsukamoto_for_SARIMA_On_Automation_of_Bandwidth_Allocation/links/5a2625f4a6fdcc8e866bb4cd/Fuzzy-Logic-Tsukamoto-for-SARIMA-On-Automation-of-Bandwidth-Allocation.pdf",
     "description": null,
@@ -63,30 +66,43 @@
     "year": "2017"
   },
   {
-    "position": 8,
-    "title": "A PLATFORM VIEW OF AUTOMATIC SHORT ANSWER SCORING SYSTEM",
+    "position": 7,
+        "title": "A PLATFORM VIEW OF AUTOMATIC SHORT ANSWER SCORING SYSTEM",
     "link": "https://www.academia.edu/download/115462057/70.pdf",
     "description": null,
     "authors": "M Riasetiawan, BN Prastowo, Isna Alfi Bustoni…",
     "venue": "Proceeding Book of 1st International Conference on Educational Assessment and Policy",
     "year": "2018"
+
+  
   },
-    {
-    "position": 9,
+  {
+    "position": 8,
     "title": "Forecasting model for hotspot bandwidth management at Department of Electrical Engineering and Information Technology UGM",
     "link": "https://www.researchgate.net/profile/Adhistya-Permanasari-2/publication/282010306_Forecasting_Model_for_Hotspot_Bandwidth_Management_at_Department_of_Electrical_Engineering_and_Information_Technology_UGM/links/567a2a0508ae7fea2e98bf5f/Forecasting-Model-for-Hotspot-Bandwidth-Management-at-Department-of-Electrical-Engineering-and-Information-Technology-UGM.pdf",
     "description": null,
     "authors": "Adhistya Erna Permanasari, Indriana Hidayah, Isna Alfi Bustoni",
     "venue": "International Journal of Applied Math and Statistics",
     "year": "2015"
+
   },
-  {
-    "position": 10,
-    "title": "PERAMALAN LALU-LINTAS JARINGAN UGM HOTSPOT MENGGUNAKAN METODE SEASONAL AUTOREGRESSIVE INTEGRATED MOVING AVERAGE",
+    {
+    "position": 9,
+"title": "PERAMALAN LALU-LINTAS JARINGAN UGM HOTSPOT MENGGUNAKAN METODE SEASONAL AUTOREGRESSIVE INTEGRATED MOVING AVERAGE",
     "link": "https://etd.repository.ugm.ac.id/penelitian/detail/70859",
     "description": null,
     "authors": "Isna Alfi Bustoni",
     "venue": "2014",
     "year": "2014"
+  },
+  {
+    "position": 10,
+    
+    "title": "SARIMA (Seasonal ARIMA) implementation on time series to forecast the number of Malaria incidence",
+    "link": "https://ieeexplore.ieee.org/abstract/document/6676239/",
+    "description": null,
+    "authors": "Ashistya Erna Permanasari, Indriana Hidayah, Isna Alfi Bustoni",
+    "venue": "2013 international conference on information technology and electrical engineering (ICITEE)",
+    "year": "2013"
   }
 ]
