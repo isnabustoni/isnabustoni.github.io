@@ -150,11 +150,10 @@ margin-top:40px;
 }
 
 .pub-card{
-display:flex;
-gap:20px;                /* more breathing room */
-padding:10px;
+display:block;
+max-width:600px;
+margin-bottom:25px;
 }
-
 
 /* .pub-card{
 display:flex;
@@ -166,12 +165,18 @@ overflow:hidden;
 margin-bottom:20px;
 } */
 
-.pub-thumb{
+/* .pub-thumb{
 width:220px;              /* wider than before */
 aspect-ratio: 16 / 9;    /* landscape */
 flex-shrink:0;
 overflow:hidden;
 border-radius:10px;
+} */
+
+.pub-thumb{
+width:100%;
+aspect-ratio: 16 / 9;
+margin-bottom:10px;
 }
 
 .pub-thumb img{
