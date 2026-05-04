@@ -165,19 +165,15 @@ overflow:hidden;
 margin-bottom:20px;
 } */
 
-/* .pub-thumb{
+.pub-thumb{
 width:220px;              /* wider than before */
 aspect-ratio: 16 / 9;    /* landscape */
 flex-shrink:0;
 overflow:hidden;
 border-radius:10px;
-} */
+} 
 
-.pub-thumb{
-width:100%;
-aspect-ratio: 16 / 9;
-margin-bottom:10px;
-}
+
 
 .pub-thumb img{
 width:100%;
