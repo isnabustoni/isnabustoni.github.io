@@ -5,81 +5,6 @@
 <meta charset="UTF-8">
 <title>Publications</title>
 <link rel="stylesheet" href="css/style.css">
-
-<style>
-
-/* Layout */
-#pub-list{
-max-width:900px;
-margin:auto;
-padding:20px;
-}
-
-/* Card */
-.pub-card{
-display:flex;
-gap:15px;
-background:white;
-border:1px solid #eee;
-border-radius:12px;
-overflow:hidden;
-margin-bottom:20px;
-transition:0.2s;
-}
-
-.pub-card:hover{
-transform:translateY(-3px);
-box-shadow:0 6px 16px rgba(0,0,0,0.08);
-}
-
-/* Thumbnail */
-.pub-thumb{
-width:160px;
-flex-shrink:0;
-}
-
-.pub-thumb img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-/* Content */
-.pub-content{
-padding:15px;
-flex:1;
-}
-
-.pub-title{
-font-weight:600;
-font-size:16px;
-margin-bottom:6px;
-}
-
-.pub-meta{
-font-size:14px;
-color:#555;
-margin-bottom:6px;
-}
-
-.pub-desc{
-font-size:14px;
-color:#444;
-margin-bottom:10px;
-}
-
-.pub-links a{
-text-decoration:none;
-font-size:14px;
-color:#0066cc;
-}
-
-.pub-links a:hover{
-text-decoration:underline;
-}
-
-</style>
-
 </head>
 
 <body>
@@ -96,7 +21,6 @@ text-decoration:underline;
 </nav>
 </header>
 
-
 <section>
 
 <h2 style="text-align:center;">Research Publications</h2>
@@ -104,7 +28,6 @@ text-decoration:underline;
 <div id="pub-list"></div>
 
 </section>
-
 
 <script>
 
@@ -126,8 +49,8 @@ fetch("data/google_scholar.json")
     let authors = pub.authors || "";
     authors = authors.replace("Isna Alfi Bustoni", "<strong>Isna Alfi Bustoni</strong>");
 
-    // thumbnail (fallback if missing)
-    const thumbnail = pub.thumbnail || "images/default.png";
+    // thumbnail fallback
+    const thumbnail = pub.thumbnail || "images/default.jpg";
 
     div.innerHTML = `
       <div class="pub-thumb">
@@ -146,7 +69,7 @@ fetch("data/google_scholar.json")
         </div>
 
         <div class="pub-desc">
-          ${pub.description || "Research work in HCI, data science, or intelligent systems."}
+          ${pub.description || "Research in HCI, AI, or data-driven systems."}
         </div>
 
         <div class="pub-links">
