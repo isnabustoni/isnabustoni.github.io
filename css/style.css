@@ -82,112 +82,92 @@ padding:40px;
 background:white;
 border-top:1px solid #eee;
 }
-/* Publications */
+/* ===== Publications Grid ===== */
 
-.pub-item{
-margin-bottom:25px;
-padding-bottom:20px;
-border-bottom:1px solid #eee;
+#pub-list{
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));
+gap:24px;
+}
+
+/* ===== Card ===== */
+
+.pub-card{
+display:block;
+background:white;
+border:1px solid #eee;
+border-radius:12px;
+overflow:hidden;
+transition:0.25s ease;
+}
+
+.pub-card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 24px rgba(0,0,0,0.08);
+}
+
+/* ===== Thumbnail ===== */
+
+.pub-thumb{
+width:100%;
+aspect-ratio:16 / 9;   /* landscape */
+overflow:hidden;
+background:#ddd;
+}
+
+.pub-thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:0.3s;
+}
+
+.pub-card:hover .pub-thumb img{
+transform:scale(1.05);
+}
+
+/* ===== Content ===== */
+
+.pub-content{
+padding:16px;
 }
 
 .pub-title{
 font-weight:600;
-font-size:18px;
-margin-bottom:6px;
+font-size:16px;
+margin-bottom:8px;
+line-height:1.4;
 }
 
-.pub-authors{
+.pub-meta{
+font-size:14px;
 color:#555;
-margin-bottom:4px;
+margin-bottom:8px;
 }
 
-.pub-venue{
-font-style:italic;
-color:#333;
-margin-bottom:6px;
+.pub-desc{
+font-size:14px;
+color:#444;
+margin-bottom:12px;
 }
+
+/* ===== Links ===== */
 
 .pub-links a{
-display:inline-block;
-margin-right:10px;
 text-decoration:none;
 font-size:14px;
 color:#0066cc;
+font-weight:500;
 }
 
 .pub-links a:hover{
 text-decoration:underline;
 }
 
-.design-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-margin-top:40px;
+/* ===== Responsive ===== */
+
+@media (max-width:768px){
+#pub-list{
+grid-template-columns:1fr;
 }
-
-.design-card{
-background:white;
-padding:10px;
-border-radius:10px;
-border:1px solid #eee;
-text-align:center;
-}
-
-.design-card img{
-width:100%;
-border-radius:8px;
-transition:0.3s;
-}
-
-.design-card img:hover{
-transform:scale(1.03);
-}
-
-.center{
-text-align:center;
-margin-top:40px;
-}
-
-
-
-.pub-card{
-display:flex;
-gap:20px;
-background:white;
-border:1px solid #eee;
-border-radius:12px;
-overflow:hidden;
-margin-bottom:20px;
-}
-
-.pub-thumb{
-width:220px;              /* wider than before */
-aspect-ratio: 9 / 16;    /* landscape */
-flex-shrink:0;
-overflow:hidden;
-border-radius:10px;
-} 
-
-
-
-.pub-content{
-padding:15px;
-}
-
-.pub-title{
-font-weight:600;
-margin-bottom:6px;
-}
-
-.pub-meta{
-font-size:14px;
-color:#555;
-margin-bottom:6px;
-}
-
-.pub-desc{
-font-size:14px;
-color:#444;
-margin-bottom:8px;
 }
