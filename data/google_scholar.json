@@ -3,13 +3,7 @@
     "position": 1,
     "title": "The Perception of a Tap: Using Auditory Augmented Reality to Alter the Contact Properties of a Physical Object",
     "link": "https://dl.acm.org/doi/abs/10.1145/3745770",
-    "description": "Audio Augmented Reality (AAR) offers new ways of enhancing everyday object interactions by modifying their auditory contact properties in real-time. This research explored the effects of different audio feedback (surface materials, musical instruments) and reverb parameters (mixing, depth) on perceived simultaneity, unity, agency, and object/environment properties, along with their recognition accuracy.
-
-The researchers found that audio feedback had a significant but small effect on interaction perception and altered perceived object properties. Mixing in reverb reduced audio recognition but boosted reverb determination. Guidelines were offered on combining audio feedback and reverb based on acoustic properties and reverb parameter adjustment to provide multi-level feedback for AAR.
-
-The results showed that audio feedback can change user perception of object size and material, while reverb can alter the perception of object and room size. Auditory feedback did not strongly impact perceived simultaneity, unity, and agency of the interaction, allowing for conveying information through audio and reverb concurrently. However, audio recognition accuracy was influenced by reverb mixing, with a mixing level of 0.5 or lower helping retain accuracy. Reverb could also be used to convey binary information rather than continuous when combined with audio.
-
-These findings suggest AAR can be used to create passive haptic effects and casual interactions by altering the perceived properties of physical objects through auditory augmentation. The researchers provide guidelines on selecting appropriate audio and reverb parameters to achieve desired user perceptions and recognition. Future work could explore a broader range of audio types, spatial audio, and the integration of AAR in AR headsets."
+    "description": "What if a simple tap could feel like striking metal, wood, or even a musical instrument, without changing the object at all? This paper reveals how auditory augmented reality can subtly reshape how we perceive touch, blending sound and sensation to transform everyday interactions in surprising ways.",
     "thumbnail": "images/papers/casual_interaction.jpg"
     "authors": "Isna Alfi Bustoni, Mark McGill, Stephen Brewster",
     "venue": "ACM Transactions on Computer …, 2025",
