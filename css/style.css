@@ -149,9 +149,11 @@ text-align:center;
 margin-top:40px;
 }
 
+
+
 .pub-card{
 display:flex;
-gap:15px;
+gap:20px;
 background:white;
 border:1px solid #eee;
 border-radius:12px;
